@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>teacher page </title>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form name="details" onsubmit="newTeacher(event)">
+                <h1>Create teacher</h1>
+                <div>
+                    <input type="text" placeholder="full Name" name="teacherFullName">
+                    <input type="text" placeholder="id" name="teacherId">
+                    <input type="text" placeholder="Salary" name="teacherSalary">
+                    <input type="text" placeholder="profession" name="teacherProfession">
+                    <button type="submit">Create teacher</button>
+                </div>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form id="loginForm" onsubmit="getTeachersByLowerSalary(event)">
+                <h1>get teachers by lower salary</h1>
+                <div>
+                        <input type="text" placeholder="salary" name="teacherSalaty">
+                        <button type="submit">get Teachers</button>
+                </div>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                        <button class="hidden" id="login">get teachers by lower salary</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                        <button class="hidden" id="register">Create teacher</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
